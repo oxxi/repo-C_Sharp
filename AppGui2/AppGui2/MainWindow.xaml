@@ -1,0 +1,48 @@
+﻿<Window x:Class="AppGui2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Datos Test" Height="525.54" Width="548.705" WindowStartupLocation="CenterScreen" HorizontalAlignment="Center" VerticalAlignment="Center">
+    <Grid Margin="0,0,0,3">
+        <Label Content="Tipo de Datos" HorizontalAlignment="Left" Margin="184,40,0,0" VerticalAlignment="Top" Width="152" FontFamily="Arial" FontWeight="Bold" FontSize="22"/>
+        <Label Content="Elige un Tipo de Dato" HorizontalAlignment="Left" Margin="33,101,0,0" VerticalAlignment="Top" FontFamily="Arial Narrow" FontSize="22"/>
+        <Label Content="Ejemplo Valor" HorizontalAlignment="Left" Margin="354,101,0,0" VerticalAlignment="Top" FontFamily="Arial Narrow" FontSize="24" Width="151"/>
+        <Button x:Name="btnSalir" Content="Salir" HorizontalAlignment="Left" Margin="343,380,0,0" VerticalAlignment="Top" Width="113" Height="51" BorderThickness="1" FontFamily="Arial" FontWeight="Bold" FontSize="18" RenderTransformOrigin="0.5,0.5" Click="btnSalir_Click">
+            <Button.Effect>
+                <DropShadowEffect BlurRadius="1" Color="#FFEAE6E6" RenderingBias="Quality"/>
+            </Button.Effect>
+            <Button.CacheMode>
+                <BitmapCache/>
+            </Button.CacheMode>
+            <Button.BindingGroup>
+                <BindingGroup/>
+            </Button.BindingGroup>
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="1" ScaleX="1"/>
+                    <SkewTransform AngleY="0" AngleX="0"/>
+                    <RotateTransform Angle="0"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0,1" SpreadMethod="Repeat">
+                    <GradientStop Color="#FFF3F3F3" Offset="0"/>
+                    <GradientStop Color="#FFEBEBEB" Offset="0.5"/>
+                    <GradientStop Color="#FFDDDDDD" Offset="0.34"/>
+                    <GradientStop Color="#FFCDCDCD" Offset="0.855"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <TextBox x:Name="txtValor" HorizontalAlignment="Left" Height="40" Margin="299,157,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="206"/>
+        <ListBox x:Name="lstDatos" HorizontalAlignment="Left" Height="237" Margin="33,179,0,0" VerticalAlignment="Top" Width="184" SelectionChanged="lstDatos_SelectionChanged">
+            <ListBoxItem Content="Int"  FontFamily="Arial" FontSize="30"/>
+            <ListBoxItem Content="Long" FontFamily="Arial" FontSize="30"/>
+            <ListBoxItem Content="Double" FontFamily="Arial" FontSize="30"/>
+            <ListBoxItem Content="Decimal" FontFamily="Arial" FontSize="30"/>
+            <ListBoxItem Content="String" FontFamily="Arial" FontSize="30"/>
+            <ListBoxItem Content="Char" FontFamily="Arial" FontSize="30"/>
+            <ListBoxItem Content="Bool" FontFamily="Arial" FontSize="30"/>
+        </ListBox>
+
+    </Grid>
+</Window>
